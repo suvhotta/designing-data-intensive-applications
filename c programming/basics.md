@@ -180,3 +180,10 @@
 - The data in structures are stored in contiguous memory locations.
 - While accessing the attributes of a structure through pointers, we can't directly use struct instance.attribute we need to
     use -> operator. 
+
+
+## Enums:
+- User defined datatype.
+- `enum mar_status`
+`{single, married, divorced}`
+- By default, these values are being converted into integer by the compiler.

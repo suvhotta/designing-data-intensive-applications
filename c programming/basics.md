@@ -139,6 +139,13 @@
   
 
 
+## Strings:
+- Always terminate with a '\0' null character that signifies the end of the string. ASCII value of '\0' is 0.
+    It can be initialized as one of the 2 methods:
+  - char name[] = {'a', 'b', 'c', '\0'};
+  - char name[] = "abc";
+- we can't declare multi-word string using scanf. We can however do so using gets()
+- Similarly, there is puts() for printing.
 
 ## Arrays:
 - Arrays can have only elements of the same datatype.
@@ -160,3 +167,16 @@
 - malloc is a std lib func in c that is used to dynamically assign mem. It is a part of stdlib.h
 - Malloc allocates requested size and returns a pointer. We need to capture this pointer. `int *arr = malloc(sizeof(int)*max)`
 - Once the memory has been allocated, it needs to be freed before the program closes to avoid any memory leaks, using `free(arr)`function.
+
+
+
+## Structure:
+- These are user defined data types which can contain attributes/elements from other datatypes.
+- First a structure needs to be declared using the struct keyword and in the same all the attributes should be also declared.
+- Then the structure instances can be initialized, values can be passed on to the attributes of the instances.
+- Struct declaration doesn't reserve any space in memory, it just defines the form of the structure.
+- Usually struct type declaration appears at the top of the source code or in a separate header file and is #included in the program
+    where the structure is to be used.
+- The data in structures are stored in contiguous memory locations.
+- While accessing the attributes of a structure through pointers, we can't directly use struct instance.attribute we need to
+    use -> operator. 

@@ -187,3 +187,9 @@
 - `enum mar_status`
 `{single, married, divorced}`
 - By default, these values are being converted into integer by the compiler.
+
+
+## typedef:
+- We could alias the variable type using `typedef`
+- `typedef unsigned long int UTI; UTI var, var2;`
+- Upper case letters are mostly used for typedef.

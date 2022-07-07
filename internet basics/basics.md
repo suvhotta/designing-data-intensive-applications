@@ -100,3 +100,20 @@ Any resource sharing across origins is through CORS.
 
 - CORS failure results in errors which can be further diagnosed by checking the console output 
     of the browser.
+
+## How state/session is maintained in HTTP?
+- HTTP is a stateless protocol i.e. there isn't any continuously active session being maintained b/w client and server.
+- User authentication can happen in 2 ways:
+  - Sessions: The server creates and maintains a sessionID in a cookie at the browser/client and the sessionID is passed
+        along from the client side every subsequent request being made. 
+        Can log somebody out immediately by disabling the session ID.
+        Know which user has logged in.
+        Issues: CSRF, Maintenance overhead of server side sessions.
+  - JWT: JSON Web tokens are tokens created with some signature specific to the server. If somebody tries to modify the
+        payload then the signature validation would fail. However, anybody with access to the computer might read what is
+        present in that JWT token. 
+        Not possible to log out user immediately.
+        Can't possibly know which user has logged in.
+
+- Cookie is a piece of string. Whenever the server has to set a cookie on the user's browser, it does so by passing data
+    along with the `set-cookie` response header.

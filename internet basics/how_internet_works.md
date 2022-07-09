@@ -213,3 +213,13 @@
 
 - Data always get past through our network, although not meant for us. Its job of the network card to keep/discard the
     data.
+
+
+### Difference between ARP(Address resolution protocol) and NAT(Network address translation)?
+- ARP is for one computer to determine another computer's MAC address. It is a protocol to resolve a dynamic IP address to
+    a MAC address. First the sender looks internally in the ARP cache for the MAC. If not present, then sender will send a 
+    broadcast message to all computers in the network. The receiver will respond with its MAC address in a uni-cast message.
+- NAT on the other hand is more of a router thing. Its purpose is to prevent shortage of IPV4 addresses. NAT helps to
+    translate public IP address to private IP address. The router is assigned a public IP address. Internally for all the 
+    systems connected are given internal private IP addresses. The router translates this during every incoming/outgoing
+    request.

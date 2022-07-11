@@ -239,3 +239,15 @@
     it was set. The connection is closed only when one of the 2 parties explicitly closes it.
 - Websockets can be used for real time chat applications, gaming applications etc.
 - Websockets use a format of `ws://`
+- Data can be in any format.
+- Websockets are application layer protocol.
+
+
+### XMPP
+- Websockets act as a thin layer on top of a TCP connection. However, it can work with some applications layer protocol 
+    for developing chat applications. One such example is XMPP(Extensible messaging and presence protocol).
+    The data is transmitted in XMPP through XML fragments.
+- XMPP is purely an application layer protocol and requires a transport layer protocol such as TCP, HTTP, or WebSocket 
+    to send this data back and forth.
+- XMPP has a decentralized architecture, which at times makes it comparatively slower.
+- XMPP isn't optimized to send binary data.

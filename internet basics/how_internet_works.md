@@ -231,3 +231,11 @@
     as it would have to do with additional TCP connections.
 - In HTTP/2 a single TCP connection is used very efficiently and a client can put in multiple requests in the same
     connection. To keep track of the requests and their responses, HTTP packets will be assigned stream tags.
+
+
+### What are websockets?
+- It is a 2 party protocol. But unlike HTTP when the communication was mostly unidirectional, websockets are 
+    bidirectional. The bidirectional mode of communication is achieved by keeping the connection open after the first time
+    it was set. The connection is closed only when one of the 2 parties explicitly closes it.
+- Websockets can be used for real time chat applications, gaming applications etc.
+- Websockets use a format of `ws://`

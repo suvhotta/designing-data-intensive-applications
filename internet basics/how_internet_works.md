@@ -223,3 +223,11 @@
     translate public IP address to private IP address. The router is assigned a public IP address. Internally for all the 
     systems connected are given internal private IP addresses. The router translates this during every incoming/outgoing
     request.
+
+
+### How is HTTP/2 different?
+- In HTTP/1.1 one TCP connection could only transfer one resource at a time. For a workaround browsers created 6 TCP 
+    connections simultaneously. But if there are more than 6 resources to be fetched then again that would be an issue 
+    as it would have to do with additional TCP connections.
+- In HTTP/2 a single TCP connection is used very efficiently and a client can put in multiple requests in the same
+    connection. To keep track of the requests and their responses, HTTP packets will be assigned stream tags.
